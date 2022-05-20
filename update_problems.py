@@ -1,5 +1,5 @@
+"""Module UpdateProblems updating problems."""
 import pandas as pd
-
 
 categories = {
     "onyomi": {
@@ -136,25 +136,28 @@ converters = {
 
 
 def fetch_problems(category, attr):
+    "Function fetching problems."
     try:
         uri = F'http://teihitsu.html.xdomain.jp/{category}.xls'
 
         print(F"Fetching problems from {uri}...")
 
-        df = pd.read_excel(uri,
-                           index_col=attr["index_col"],
-                           header=attr["header"],
-                           names=attr["names"],
-                           converters=converters)
+        dataframe = pd.read_excel(uri,
+                                  index_col=attr["index_col"],
+                                  header=attr["header"],
+                                  names=attr["names"],
+                                  converters=converters)
 
-        print(df.to_json(orient='records', force_ascii=False, lines=True))
+        print(dataframe.to_json(orient='records', force_ascii=False,
+                                lines=True))
 
-        df.to_pickle(F'problems/{category}.pkl')
-    except Exception as e:
-        raise e
+        dataframe.to_pickle(F'problems/{category}.pkl')
+    except Exception as error:
+        raise error
 
 
 def main():
+    "Function fetching problems for all categories."
     for category, attr in categories.items():
         fetch_problems(category, attr)
 
