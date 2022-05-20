@@ -30,7 +30,9 @@ jobs:
         USER_NAME: yudukikun5120
     - name: Commit new files
       run: |
-        git add .
-        git commit -am "Update problems"
-        git pull
-        git push origin master
+        git diff --exit-code
+        if [[ $? = 1 ]]; then
+          git add .
+          git commit -am "Update problems with a workflow"
+          git push origin main
+        fi
