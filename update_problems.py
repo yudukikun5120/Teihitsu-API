@@ -71,7 +71,7 @@ categories = {
         "index_col": 0,
     },
     "jyuku_ate": {
-        "header": 7,
+        "header": 6,
         "names": [
             "",
             "id",
