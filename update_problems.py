@@ -132,7 +132,7 @@ converters = {
     "problem": lambda str: re.sub(r'^【(.*)】$', r'\1', str),
     "level": lambda str: int(re.sub(r'\D', '', str)),
     "source": lambda str: re.sub(r'\D', '', str),
-    "word_group": lambda str: tuple(str.split()),
+    "word_group": lambda str: tuple(re.split('\n|・', str)),
 }
 
 
