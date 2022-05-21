@@ -22,7 +22,3 @@ def read_item(category: str, id_: int):
 
     return Response(problem.to_json(force_ascii=False),
                     media_type="application/json")
-
-
-if __name__ == '__main__':
-    print(read_item("onyomi", 1))
