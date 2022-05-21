@@ -1,12 +1,12 @@
 name: Update Problems
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 0 1 * *'
+  workflow_dispatch:
 
 jobs:
-  update_problems:
+  update-problems:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -26,3 +26,13 @@ jobs:
         commit_message: Apply automatic changes for problems data
         file_pattern: problems/*.pkl
         commit_author: ${{ github.actor }}
+  deploy:
+    runs-on: ubuntu-latest
+    needs: update-problems
+    steps:
+      - uses: actions/checkout@v2
+      - uses: BogDAAAMN/deta-deploy-action@v1.0.1
+        with:
+          deta-access-token: ${{ secrets.DETA_TOKEN }}
+          deta-name: teihitsu-api
+
