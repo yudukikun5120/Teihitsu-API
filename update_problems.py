@@ -1,4 +1,5 @@
 """Module UpdateProblems updating problems."""
+import re
 import pandas as pd
 
 categories = {
@@ -135,7 +136,7 @@ converters = {
 }
 
 
-def fetch_problems(category, attr):
+def fetch_problems(*, category, attr):
     "Function fetching problems."
     try:
         uri = F'http://teihitsu.html.xdomain.jp/{category}.xls'
@@ -159,9 +160,8 @@ def fetch_problems(category, attr):
 def main():
     "Function fetching problems for all categories."
     for category, attr in categories.items():
-        fetch_problems(category, attr)
+        fetch_problems(category=category, attr=attr)
 
 
 if __name__ == '__main__':
-    import re
     main()
