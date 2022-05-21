@@ -1,4 +1,4 @@
-name: Update Problems
+name: Problems update
 
 on:
   schedule:
@@ -35,4 +35,3 @@ jobs:
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }}
           deta-name: teihitsu-api
-
