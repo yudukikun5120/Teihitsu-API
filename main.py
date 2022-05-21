@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/items/{category}")
 def read_items(category: str):
-    "Function read items."
+    "Function reading items."
     problems = pd.read_pickle(F'problems/{category}.pkl')
 
     return Response(problems.to_json(orient='records', force_ascii=False,
@@ -16,7 +16,7 @@ def read_items(category: str):
 
 @app.get("/items/{category}/{id_}")
 def read_item(category: str, id_: int):
-    "Function read an item."
+    "Function reading an item."
     problems = pd.read_pickle(F'problems/{category}.pkl')
     problem = problems.iloc[id_]
 
