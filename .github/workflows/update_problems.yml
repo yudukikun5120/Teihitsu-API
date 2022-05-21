@@ -21,18 +21,8 @@ jobs:
     - name: Update problems
       run: |
         python update_problems.py
-    - name: Config git profile
-      run: |
-        git config user.email $USER_EMAIL
-        git config user.name $USER_NAME
-      env:
-        USER_EMAIL: yudukikun5120@gmail.com
-        USER_NAME: yudukikun5120
-    - name: Commit new files
-      run: |
-        git diff --exit-code
-        if [[ $? = 1 ]]; then
-          git add .
-          git commit -am "Update problems with a workflow"
-          git push origin main
-        fi
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply automatic changes for problems data
+        file_pattern: problems/*.pkl
+        commit_author: ${{ github.actor }}
