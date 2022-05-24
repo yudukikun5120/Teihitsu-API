@@ -138,15 +138,17 @@ converters = {
 
 def fetch_problems(*, category: str, attr: dict) -> pd.DataFrame:
     """Function fetching problems."""
-    try:
-        uri = F'http://teihitsu.html.xdomain.jp/{category}.xls'
-        print(F"Fetching problems from {uri}...")
-        dataframe = pd.read_excel(uri,
-                                  index_col=attr["index_col"],
-                                  header=attr["header"],
-                                  names=attr["names"],
-                                  converters=converters)
+    uri = F'http://teihitsu.html.xdomain.jp/{category}.xls'
+    print(F"Fetching problems from {uri}...")
 
+    try:
+        dataframe = pd.read_excel(
+            uri,
+            index_col=attr["index_col"],
+            header=attr["header"],
+            names=attr["names"],
+            converters=converters
+        )
         return dataframe
 
     except Exception as error:
