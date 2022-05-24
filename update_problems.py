@@ -3,7 +3,7 @@ import re
 import json
 import pandas as pd
 
-with open('categories.json') as f:
+with open('categories.json', encoding="utf-8") as f:
     categories = json.load(f)
 
 converters = {

@@ -8,7 +8,7 @@ from update_problems import fetch_problems
 class TestProblemsDataFrame(unittest.TestCase):
     """Class TestProblemsDataFrame testing each problems data frames"""
 
-    with open('categories.json') as f:
+    with open('categories.json', encoding="utf-8") as f:
         CATEGORIES = json.load(f)
 
     def test_onyomi(self, categories=CATEGORIES):
@@ -25,7 +25,7 @@ class TestProblemsDataFrame(unittest.TestCase):
             "┌1.つまずいて足をすべらす。\n└2.ちぐはぐになって、失敗する。〈漢字源〉\n◇漢字ペディア大見出し\n●H4-1㈠"
         )
 
-    # TODO: write test_other_categories
+    # IDEA: write test_other_categories
 
 if __name__ == '__main__':
     unittest.main()
