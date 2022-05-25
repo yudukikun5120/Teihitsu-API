@@ -1,6 +1,7 @@
 """Module UpdateProblems updating problems."""
 import re
 import json
+import logging
 import pandas as pd
 
 with open('categories.json', encoding="utf-8") as f:
@@ -17,7 +18,7 @@ converters = {
 def fetch_problems(*, category: str, attr: dict) -> pd.DataFrame:
     """Function fetching problems."""
     uri = F'http://teihitsu.html.xdomain.jp/{category}.xls'
-    print(F"Fetching problems from {uri}...")
+    logging.info("Fetching problems from %s ...", uri)
 
     try:
         dataframe = pd.read_excel(
@@ -45,10 +46,18 @@ def store_dataframe(*, dataframe: pd.DataFrame, category: str) -> None:
 
 def main(categories_: dict) -> None:
     """Function fetching problems for all categories."""
+    logging.basicConfig(level=logging.DEBUG)
     for category, attr in categories_.items():
         dataframe = fetch_problems(category=category, attr=attr)
         store_dataframe(dataframe=dataframe, category=category)
-        print(dataframe_to_json(dataframe))
+        logging.info(
+            """Dataframe of %s in JSON format:
+
+%s
+            """,
+            category,
+            dataframe_to_json(dataframe)
+        )
 
 
 if __name__ == '__main__':
