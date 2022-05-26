@@ -2,6 +2,7 @@
 import re
 import json
 import logging
+import progressbar
 import pandas as pd
 
 with open('categories.json', encoding="utf-8") as f:
@@ -28,6 +29,8 @@ def fetch_problems(*, category: str, attr: dict) -> pd.DataFrame:
             names=attr["names"],
             converters=converters
         )
+
+        logging.info("Succeeded in fetching %s problems.", category)
         return dataframe
 
     except Exception as error:
@@ -46,11 +49,11 @@ def store_dataframe(*, dataframe: pd.DataFrame, category: str) -> None:
 
 def main(categories_: dict) -> None:
     """Function fetching problems for all categories."""
-    logging.basicConfig(level=logging.DEBUG)
-    for category, attr in categories_.items():
+    logging.basicConfig(level=logging.INFO)
+    for category, attr in progressbar.progressbar(categories_.items()):
         dataframe = fetch_problems(category=category, attr=attr)
         store_dataframe(dataframe=dataframe, category=category)
-        logging.info(
+        logging.debug(
             """Dataframe of %s in JSON format:
 
 %s
