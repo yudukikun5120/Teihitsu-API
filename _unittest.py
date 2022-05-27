@@ -14,7 +14,7 @@ class TestProblemsDataFrame(unittest.TestCase):
     def test_onyomi(self, categories=CATEGORIES):
         """Function TestOnyomi testing the start row and data types"""
         attr = categories['onyomi']
-        dataframe = fetch_problems(category='onyomi', attr=attr)
+        dataframe = fetch_problems(category='onyomi', **attr)
         self.assertEqual(dataframe.at[1, 'id'], 1)
         self.assertEqual(dataframe.at[1, 'problem'], "蹉跌")
         self.assertEqual(dataframe.at[1, 'level'], 1)
