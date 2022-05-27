@@ -16,7 +16,9 @@ converters = {
 }
 
 
-def fetch_problems(*, category: str, attr: dict) -> pd.DataFrame:
+def fetch_problems(
+        *, category: str, index_col: int, header: int, names: list
+        ) -> pd.DataFrame:
     """Function fetching problems."""
     uri = F'http://teihitsu.html.xdomain.jp/{category}.xls'
     logging.info("Fetching problems from %s ...", uri)
@@ -24,9 +26,9 @@ def fetch_problems(*, category: str, attr: dict) -> pd.DataFrame:
     try:
         dataframe = pd.read_excel(
             uri,
-            index_col=attr["index_col"],
-            header=attr["header"],
-            names=attr["names"],
+            index_col=index_col,
+            header=header,
+            names=names,
             converters=converters
         )
 
@@ -51,7 +53,7 @@ def main(categories_: dict) -> None:
     """Function fetching problems for all categories."""
     logging.basicConfig(level=logging.INFO)
     for category, attr in progressbar.progressbar(categories_.items()):
-        dataframe = fetch_problems(category=category, attr=attr)
+        dataframe = fetch_problems(category=category, **attr)
         store_dataframe(dataframe=dataframe, category=category)
         logging.debug(
             """Dataframe of %s in JSON format:
