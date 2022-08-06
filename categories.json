@@ -30,7 +30,7 @@
           "",
           "id",
           "problem",
-          "pseudo-level",
+          "pseudo_level",
           "correct_answer",
           "alt_correct_answer",
           "note"
