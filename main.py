@@ -7,7 +7,12 @@ app = FastAPI()
 
 @app.get("/items/{category}")
 def read_items(category: str):
-    "Function reading items."
+    """
+    Function reading items.
+
+    <category> ::=
+    onyomi | kunyomi | kokuji | yoji-kaki | yoji-imi | jyuku_ate | onkun | tai-rui | kojikoto
+    """
     problems = pd.read_pickle(F'problems/{category}.pkl')
 
     return Response(problems.to_json(orient='records', force_ascii=False,
