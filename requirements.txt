@@ -1,4 +1,3 @@
 fastapi
-pandas
 progressbar2
 xlrd
