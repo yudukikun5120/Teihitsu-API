@@ -1,1 +1,20 @@
-{"id":"246e8982-7a40-4b07-a9ad-d1523d985b4e","space":17157,"runtime":"python3.9","name":"teihitsu-api","path":"oyvvyr","project":"c0m1mlbc","account":"144798365827","region":"ap-southeast-1","deps":["fastapi","pandas","xlrd"],"envs":null,"public":true,"log_level":"debug","cron":""}
+{
+  "id": "d0977d84-ef6a-4fef-a29c-eda508d56eb0",
+  "space": 17157,
+  "runtime": "python3.9",
+  "name": "teihitsu-api",
+  "path": "22vm46",
+  "project": "c02ockgw",
+  "account": "144798365827",
+  "region": "ap-southeast-1",
+  "deps": [
+    "fastapi",
+    "progressbar2",
+    "xlrd",
+    "uvicorn"
+  ],
+  "envs": null,
+  "public": true,
+  "log_level": "debug",
+  "cron": ""
+}

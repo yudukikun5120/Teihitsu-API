@@ -1,1 +1,27 @@
-{"LICENSE":"d356df8f9afb3e413014266da3c4217ef8931e9fcf3855200822dc37c84e9bc8","README.md":"3849466de6b49f8fd5330a199779d9133ba1752645eaec9f7c4f21d4d64c7e3e","main.py":"70a41932ae27e02eda9107d6309e13e2ef31dc7c787fbbc5e54f9fbe18e25fee","problems/jyuku_ate.pkl":"59aa70f7dbf120442520a1bb41ce6186dcafd556d8f5004ab91c8e4342272f39","problems/kojikoto.pkl":"ff965aeadb1d32359b9d9822a151902131214ede959e7121f655c261a20210b0","problems/kokuji.pkl":"8f2347d96e2b547fd5ab65e5a1daa1698308c2f959b68bb13fb0f733f7a2226c","problems/kunyomi.pkl":"fc5137b47ff0a0c19d6f9c0b1eafc1394033cdda2473962f92cac0c47f526660","problems/onkun.pkl":"0be94c1c2617bc2d0594747d9c0afd8403f08453ab0a4bc4e29c36103acc8dae","problems/onyomi.pkl":"745fc228cc5b06403181b22a9a26b3968d982db8590231caf3c89358886c4d32","problems/tai-rui.pkl":"4abd458967636913814ec799afbc83335cdef07a418e2213542754bec60c36cf","problems/yoji-imi.pkl":"20cedfd3a90dd8627a3a6749272ffd26c65c3d6ee12b32543737f67d00d2ff06","problems/yoji-kaki.pkl":"d41dac5f3f30f7be27e2ca544fa1a1200cf6138c38bb6d1eb205a36e5e8e3a39","requirements.txt":"4bc7bd4b8b7ab0130fb7d9015627fd2343d4b4c43762aa7aa6c1777e6c9486f9","update_problems.py":"f0215ccfe96c958d398eb385eaf537687ca5b7f22fcdac3ba55f393b6a85aba0"}
+{
+  "LICENSE": "d356df8f9afb3e413014266da3c4217ef8931e9fcf3855200822dc37c84e9bc8",
+  "README.md": "b6e265235a12e5393636c09c352d69adf76a11ecff540af516352f5b5ed8a7f3",
+  "categories.json": "b2f689ac91ef44f320213045514206fb4f60103307f0af9717f083ef9f7fc26d",
+  "main.py": "732a6a67f4f1625f2d96eae4ba3162e65d0e4216264838eff32134dd6009eaee",
+  "problems/dataframe/jyuku_ate.pkl": "ec86e2b41ef96810a9b22ff130ff558b089d0c8e3053ebb6808e596f160fbf8c",
+  "problems/dataframe/kojikoto.pkl": "c33662a3b881fe96e15664fed0381d9f8e6d5858a54e592b0c474332f8a575d2",
+  "problems/dataframe/kokuji.pkl": "98288875e28507d69d5c3b4a39545283db9d71dfcdde4f4355b9b8caee09a405",
+  "problems/dataframe/kunyomi.pkl": "cf7407d51b776cf5181dcdb6fdf9d0e62bf36979ec8ea33cb5dd4aeb884f2bb5",
+  "problems/dataframe/onkun.pkl": "8b871042f4f0aa065e0adc5b0739b32f3ee82f1b75a7ad3d2a7c046c5e81c169",
+  "problems/dataframe/onyomi.pkl": "4a6778685e6dd1321941599a2d5d5c8f6b235acc6ca5568e9308880206d31f50",
+  "problems/dataframe/tai-rui.pkl": "06ca170554d09c3bfc839d7fe6e870b2a1399b592b16b4af5666f93c5fa9b611",
+  "problems/dataframe/yoji-imi.pkl": "10e56b3deff4942c7e58f748674487ca60ce0d13c5748a59a2e8e853ce3aba6b",
+  "problems/dataframe/yoji-kaki.pkl": "f6d2044d49c33ca641bd12fcc2b40bebffa6f61a6f265171e2f66d0419509f1d",
+  "problems/vanilla/jyuku_ate.pkl": "952ecc9df266271aff0c37ac605dbc5e8b80334458eb9acbcb5af69a999ac939",
+  "problems/vanilla/kojikoto.pkl": "bb96df7179fbe6a5d6b52519cbc901a16caa2463736673277e4aa781bce0f07e",
+  "problems/vanilla/kokuji.pkl": "d2e958fc6128237a5245af504cf9f3d8493cac17565c20cba335982ae3c403a6",
+  "problems/vanilla/kunyomi.pkl": "2f1ce50f0a843a405322f23025bb279defee3f6ce40c68df069a465821ee0eea",
+  "problems/vanilla/onkun.pkl": "4b8f7e46abc75a04cb5e5664569a0214eb96249db237fd760a37515aa2257459",
+  "problems/vanilla/onyomi.pkl": "fa211ba95d5cb26427a4b2df655e61111c75f6e007b09a2e93745c1711bd1b2a",
+  "problems/vanilla/tai-rui.pkl": "1bba6e2d47f881b5c0c9799937005dca10e9684db0893a2699901188a4e62cda",
+  "problems/vanilla/yoji-imi.pkl": "5400226c3d73c98573d173c3b68391e5f8404e69926e3175a642ab5608828718",
+  "problems/vanilla/yoji-kaki.pkl": "07905539376d8d509025416d38e21d534c87dce1b33b605fa9f1d89af00f6ee6",
+  "requirements.txt": "afa966d20f400df8491115136d6850f3f74b073bd744936b7b945a4dd50fafef",
+  "test_problems_dataframe.py": "f9e0b90f9d4f6c8653aa1ce8e280467f40dd6865dca4915d2732afc0aa9c1dd4",
+  "update_problems.py": "e755b5fedbe7dfee975b9ebaf5cdb5054393fa627adfbd2404c52d6132427c7a"
+}
