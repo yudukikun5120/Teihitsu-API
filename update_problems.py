@@ -3,9 +3,9 @@ import json
 import logging
 import pickle
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 import pandas as pd
-import progressbar
 
 converters = {
     "problem": lambda str: re.sub(r'^【(.*)】$', r'\1', str),
@@ -53,18 +53,23 @@ def store_dict(*, problem_data: pd.DataFrame, category: str) -> None:
 def main(categories_: dict) -> None:
     """Function fetching problems for all categories."""
     logging.basicConfig(level=logging.INFO)
-    for category, attr in progressbar.progressbar(categories_.items()):
-        dataframe = fetch_problems(category=category, **attr)
-        store_dataframe(dataframe=dataframe, category=category)
-        store_dict(problem_data=dataframe, category=category)
-        logging.debug(
-            """Dataframe of %s in JSON format:
+    logging.info("Fetching problems for all categories ...")
+    ThreadPoolExecutor(max_workers=10).map(store_data, categories_.items())
+
+def store_data(category_):
+    """Function storing data."""
+    category, attr = category_
+    dataframe = fetch_problems(category=category, **attr)
+    store_dataframe(dataframe=dataframe, category=category)
+    store_dict(problem_data=dataframe, category=category)
+    logging.debug(
+        """Dataframe of %s in JSON format:
 
 %s
-            """,
-            category,
-            dataframe_to_json(dataframe)
-        )
+        """,
+        category,
+        dataframe_to_json(dataframe)
+    )
 
 
 if __name__ == '__main__':
