@@ -1,125 +1,118 @@
 {
   "onyomi": {
-      "header": 9,
-      "names": [
-          "id",
-          "problem",
-          "level",
-          "correct_answer",
-          "alt_correct_answers",
-          "note",
-          ""
-      ],
-      "index_col": 1
+    "header": 9,
+    "names": [
+      "id",
+      "problem",
+      "level",
+      "correct_answer",
+      "alt_correct_answers",
+      "note",
+      ""
+    ],
+    "index_col": 1
   },
   "kunyomi": {
-      "header": 8,
-      "names": [
-          "",
-          "id",
-          "problem",
-          "level",
-          "correct_answer",
-          "note"
-      ],
-      "index_col": 0
+    "header": 8,
+    "names": ["", "id", "problem", "level", "correct_answer", "note"],
+    "index_col": 1
   },
   "kokuji": {
-      "header": 7,
-      "names": [
-          "",
-          "id",
-          "problem",
-          "pseudo_level",
-          "correct_answer",
-          "alt_correct_answer",
-          "note"
-      ],
-      "index_col": 0
+    "header": 7,
+    "names": [
+      "",
+      "id",
+      "problem",
+      "pseudo_level",
+      "correct_answer",
+      "alt_correct_answer",
+      "note"
+    ],
+    "index_col": 1
   },
   "yoji-kaki": {
-      "header": 8,
-      "names": [
-          "id",
-          "problem",
-          "reading",
-          "level",
-          "correct_answer",
-          "alt_correct_answers",
-          "source",
-          "note",
-          ""
-      ],
-      "index_col": 1
+    "header": 8,
+    "names": [
+      "id",
+      "problem",
+      "reading",
+      "level",
+      "correct_answer",
+      "alt_correct_answers",
+      "source",
+      "note",
+      ""
+    ],
+    "index_col": 1
   },
   "yoji-imi": {
-      "header": 8,
-      "names": [
-          "",
-          "id",
-          "problem",
-          "word_group",
-          "level",
-          "correct_answer",
-          "alt_correct_answers",
-          "source",
-          "note"
-      ],
-      "index_col": 0
+    "header": 8,
+    "names": [
+      "",
+      "id",
+      "problem",
+      "word_group",
+      "level",
+      "correct_answer",
+      "alt_correct_answers",
+      "source",
+      "note"
+    ],
+    "index_col": 1
   },
   "jyuku_ate": {
-      "header": 7,
-      "names": [
-          "",
-          "id",
-          "problem",
-          "level",
-          "correct_answer",
-          "alt_correct_answers",
-          "note"
-      ],
-      "index_col": 0
+    "header": 7,
+    "names": [
+      "",
+      "id",
+      "problem",
+      "level",
+      "correct_answer",
+      "alt_correct_answers",
+      "note"
+    ],
+    "index_col": 1
   },
   "onkun": {
-      "header": 8,
-      "names": [
-          "",
-          "id",
-          "onyomi",
-          "onyomi_answer",
-          "kunyomi",
-          "kunyomi_answer",
-          "level",
-          "note"
-      ],
-      "index_col": 0
+    "header": 8,
+    "names": [
+      "",
+      "id",
+      "onyomi",
+      "onyomi_answer",
+      "kunyomi",
+      "kunyomi_answer",
+      "level",
+      "note"
+    ],
+    "index_col": 1
   },
   "tai-rui": {
-      "header": 8,
-      "names": [
-          "",
-          "id",
-          "problem",
-          "type",
-          "word_group",
-          "level",
-          "correct_answer",
-          "note_on_question",
-          "note_on_answer"
-      ],
-      "index_col": 0
+    "header": 8,
+    "names": [
+      "",
+      "id",
+      "problem",
+      "type",
+      "word_group",
+      "level",
+      "correct_answer",
+      "note_on_question",
+      "note_on_answer"
+    ],
+    "index_col": 1
   },
   "kojikoto": {
-      "header": 10,
-      "names": [
-          "id",
-          "problem",
-          "level",
-          "correct_answer",
-          "alt_correct_answers",
-          "note",
-          ""
-      ],
-      "index_col": 1
+    "header": 10,
+    "names": [
+      "id",
+      "problem",
+      "level",
+      "correct_answer",
+      "alt_correct_answers",
+      "note",
+      ""
+    ],
+    "index_col": 1
   }
 }
