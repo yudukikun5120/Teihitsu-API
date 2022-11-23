@@ -31,6 +31,8 @@ jobs:
     needs: update-problems
     steps:
       - uses: actions/checkout@v2
+      - name: Update problems
+        run: pip uninstall pandas
       - uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }}
