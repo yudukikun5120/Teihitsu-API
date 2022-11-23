@@ -34,6 +34,7 @@ def fetch_problems(
         return dataframe.fillna(0)
 
     except Exception as error:
+        logging.error("Failed to fetch %s problems.", category)
         raise error
 
 
